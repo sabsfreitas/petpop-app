@@ -21,7 +21,7 @@ $(document).ready(function() {
                 <div class="image-container">
                     <img src="${product.image}" alt="">
                         <div class="overlay">
-                            <button class="cart-button"><a href="cart.html?product=${product.id}">Adicionar ao carrinho</a></button>
+                            <button class="cart-button" onclick="addToCart(${product.id})">Adicionar ao carrinho</button>
                         </div>
                 </div>
                     <div class="card-content">
