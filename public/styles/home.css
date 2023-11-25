@@ -5,19 +5,31 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    letter-spacing: 1px;
+}
+
+body {
+    background-color: #FDFDF4;
+}
+
+#logo {
+    color: #004E89;
 }
 
 li, a {
-    color: #ecf0f1;
+    color: #1A659E;
+    font-weight: bold;
     text-decoration: none;
 }
 
-header {
+#main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding:  30px 5%;
-    background-color: #87CEEB;
+    border-bottom: 1.5px solid #004E89;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .nav-links {
@@ -34,7 +46,7 @@ header {
 }
 
 .nav-links a:hover {
-    color: paleturquoise;
+    color: #004E89;
 }
 
 .sidebar {
@@ -65,4 +77,138 @@ header {
     #hide_desktop {
         display: none;
     }
+}
+
+main {
+    padding: 5% 5%;
+    color: #004E89;
+}
+
+.content {
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content .main-text,
+.content #yellow-cat {
+    margin: 3%; 
+}
+
+#paw-prints img {
+    width: 50px; 
+    height: auto;
+}
+
+/* .main-container {
+} */
+
+.main-container #article-header {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin-left: 22px;
+    padding: 1%;
+    width: 25vw;
+}
+
+#article-header img {
+    width: 2vw;
+    margin: 0 15px 0 15px;
+}
+
+.cards {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.card {
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 10px;
+    width: 20vw;
+    height: 55vh;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.cart-button {
+    border-radius: 15px;
+    border: none;
+    padding: 0.5rem;
+    color: #004E89;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(233, 185, 114, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.card-content p {
+    padding: 15px;
+}
+
+.card-content h4 {
+    font-weight: lighter;
+}
+
+
+.card-content .price {
+    font-weight: 900;
+    color: #FF6B35;
+    text-align: left;
+}
+
+.card-content .tag {
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-align: right;
+}
+
+footer {
+    background-color: #F8F0DB;
+    width: 100%;
+    height: 30vh;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 3rem 3.5rem;
+    color: #004E89;
+    font-weight: 800;
 }

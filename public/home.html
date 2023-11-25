@@ -9,8 +9,8 @@
     <script src="../src/home.js"></script>
 </head>
 <body>
-    <header>
-        <h1>PetPop.</h1>
+    <header id="main-header">
+        <h1 id="logo">PetPop.</h1>
 
         <nav class="nav-links">
             <ul class="sidebar">
@@ -29,8 +29,28 @@
         </nav>
         
     </header>
-    <main>
+    <main class="content">
+        <div class="main-text">
+            <h2>Fazendo o mundo um lugar mais feliz, <br>uma patinha de cada vez</h2>
+            <p>Compre com confiança, mime seu pet <br>com o melhor!</p>
+        </div>
+        <div id="paw-prints"><img src="../public/assets/pawprints.svg" alt=""></div>
+        <div id="yellow-cat"><img src="../public/assets/gatinho.svg" alt=""></div>
 
+        <article class="main-container">
+            <header id="article-header">
+                <img src="../public/assets/paw.svg" alt="">
+                <h3>Mimos para seu pet</h3>
+            </header>
+            <div class="cards"></div> <!-- aqui vai o array de objetos dos produtos -->
+        </article>
     </main>
+    <footer>
+        <div class="footer-content">
+                <img src="../public/assets/paw.svg" alt="">
+                <p>Design & desenvolvimento por Sabrina Freitas</p>
+                <p>Universidade Federal do Rio Grande</p>
+        </div>
+    </footer>
 </body>
 </html>
