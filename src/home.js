@@ -8,11 +8,11 @@ $(document).ready(function() {
     });
 
     const products = [
-        { id: 1, name: "Cama quentinha", tag: "Para doguinhos", image: "../public/assets/heated-dog-bed.jpg", price: 80.00 },
-        { id: 2, name: "Cama quentinha", tag: "Para doguinhos", image: "../public/assets/heated-dog-bed.jpg", price: 80.00 },
-        { id: 3, name: "Cama quentinha", tag: "Para doguinhos", image: "../public/assets/heated-dog-bed.jpg", price: 80.00 },
-        { id: 4, name: "Cama quentinha", tag: "Para doguinhos", image: "../public/assets/heated-dog-bed.jpg", price: 80.00 },
-        { id: 5, name: "Cama quentinha", tag: "Para doguinhos", image: "../public/assets/heated-dog-bed.jpg", price: 80.00 }
+        { id: 1, name: "Cama quentinha", tag: "Para doguinhos", image: "public/assets/heated-dog-bed.jpg", price: 80.00 },
+        { id: 2, name: "Cama quentinha", tag: "Para doguinhos", image: "public/assets/heated-dog-bed.jpg", price: 80.00 },
+        { id: 3, name: "Cama quentinha", tag: "Para doguinhos", image: "public/assets/heated-dog-bed.jpg", price: 80.00 },
+        { id: 4, name: "Cama quentinha", tag: "Para doguinhos", image: "public/assets/heated-dog-bed.jpg", price: 80.00 },
+        { id: 5, name: "Cama quentinha", tag: "Para doguinhos", image: "public/assets/heated-dog-bed.jpg", price: 80.00 }
     ];
 
     function generateHTML(product) {
