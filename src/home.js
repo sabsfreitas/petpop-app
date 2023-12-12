@@ -1,7 +1,7 @@
 $(document).ready(function() {
     const products = [
         { id: 1, name: "Cama quentinha", tag: "Para doguinhos", image: "public/assets/heated-dog-bed.jpg", price: 80.00 },
-        { id: 2, name: "Cama quentinha", tag: "Para doguinhos", image: "public/assets/heated-dog-bed.jpg", price: 80.00 },
+        { id: 2, name: "Whiskas", tag: "Para gatinhos", image: "public/assets/whiskas.png", price: 20.00 },
         { id: 3, name: "Cama quentinha", tag: "Para doguinhos", image: "public/assets/heated-dog-bed.jpg", price: 80.00 },
         { id: 4, name: "Cama quentinha", tag: "Para doguinhos", image: "public/assets/heated-dog-bed.jpg", price: 80.00 }
     ];
@@ -40,6 +40,7 @@ $(document).ready(function() {
     mesInput = $("input#mes"),
     cvcInput = $("input#cvc"),
     cardInput = $("input#payment-card"),
+    nameInput = $("input#payment-name"),
     cardDiv = $("#credit-card");
 
     IMask(cpfInput[0], {
@@ -48,6 +49,11 @@ $(document).ready(function() {
     
     IMask(cardInput[0], {
         mask: '0000 0000 0000 0000'
+    });
+
+    IMask(nameInput[0], {
+        mask: /\p{L}+/u,
+        prepareChar: str => str.toUpperCase(),
     });
 
     IMask(mesInput[0], {
@@ -62,6 +68,11 @@ $(document).ready(function() {
       to: 2090,
       maxLength: 4,
     });
+
+    IMask(cvcInput[0], {
+        mask: '000',
+    });
+
     IMask(cvcInput[0], {
         mask: '000',
     });
