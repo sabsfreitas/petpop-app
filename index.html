@@ -5,31 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetPop</title>
     <link rel="stylesheet" href="public/styles/home.css">
-    <script src="src/jquery.js"></script>
-    <script src="src/home.js"></script>
 </head>
 <body>
     <header id="main-header">
         <h1 id="logo">PetPop.</h1>
 
         <nav class="nav-links">
-            <ul class="sidebar">
-                <li id="menu-sanduiche-2"><a href="#"><img src="public/assets/menu-sanduiche-2.svg"></a></li>
+            <ul>
                 <li><a href="#">Início</a></li>
                 <li><a href="#">Nossos produtos</a></li>
             </ul>
         </nav>
-
-        <nav class="nav-links">
-            <ul>
-                <li><a href="#" class="hide_mobile">Início</a></li>
-                <li><a href="#" class="hide_mobile">Nossos produtos</a></li>
-                <li><a href="#" class="hide_mobile"><img src="public/assets/cart.svg"></a></li>
-                <li id="menu-sanduiche-1"><a href="#" id="hide_desktop"><img src="public/assets/menu-sanduiche-1.svg"></a></li>
-            </ul>
-        </nav>
-        
+        <div class="shopping">
+            <img src="public/assets/cart.svg" alt="">
+            <span class="quantity">0</span>
+        </div>
     </header>
+
+    <div class="cart">
+        <div class="close-shopping"><img src="./public/assets/close.svg"></div>
+        <h1>Carrinho de compras</h1>
+        <div class="cart-content">
+
+        </div>
+        <div class="checkout">
+            <div class="total">0</div>
+            <div class="checkout-bttn">Ver opções de pagamento</div>
+        </div>
+
+        <div id="payment-modal" class="modal">
+            <div class="modal-content">
+                <h2>Escolha a forma de pagamento:</h2>
+                <div class="payment-options">
+                    <button class="payment-method" data-payment-method="pix">PIX</button>
+                    <button class="payment-method" data-payment-method="credit-card">Cartão de Crédito</button>
+                </div>
+            </div>
+
+            <div id="pix">
+                <form class="payment">
+                    <table class="paytable">
+                        <tr>
+                            <td><input type="text" name="payment-name" id="payment-name" placeholder="Nome completo" required></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="payment-cpf" id="payment-cpf" placeholder="CPF: 123.456.789.00" class="cpf-mask" required></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" value="Finalizar" id="payment-bttn" required></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div id="credit-card">
+                <form id="payment">
+                    <table class="paytable">
+                        <tr>
+                            <td>Parcelas:</td>
+                            <td><select name="parcelas" id="parcelas"></select></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="payment-name" id="payment-name" placeholder="Nome do titular" required></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="payment-card" id="payment-card" placeholder="1234 5678 9123 0000" required></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="mes" id="mes" placeholder="MM" required></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="ano" id="ano" placeholder="AA" required></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="cvc" id="cvc" placeholder="CVC" required></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" value="Finalizar" id="payment-bttn" required></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+
     <main class="content">
         <div class="main-text">
             <h2>Fazendo o mundo um lugar mais feliz, <br>uma patinha de cada vez</h2>
@@ -53,5 +112,8 @@
                 <p>Universidade Federal do Rio Grande</p>
         </div>
     </footer>
+    <script src="src/jquery.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="src/home.js"></script>
 </body>
 </html>
